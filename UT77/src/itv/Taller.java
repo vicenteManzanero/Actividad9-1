@@ -73,7 +73,13 @@ public class Taller {
     }
 
     private Vehiculo recogerNuevoVehiculo() {
-        return new Vehiculo(getMatricula(), getModelo(), getTipoVehiculo());
+        return new Vehiculo(getMatricula(), getModelo(), getTipoVehiculo(),getCilindro());
+    }
+    
+    private int getCilindro(){
+        int cilindro = 0;
+        GestorIO gestorIO = new GestorIO();
+        return cilindro;
     }
     
     private String getMatricula() {
