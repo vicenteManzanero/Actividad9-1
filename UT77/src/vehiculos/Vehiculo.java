@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package itv;
+package vehiculos;
 
+import itv.TipoVehiculo;
 import java.util.regex.Pattern;
 
 class Vehiculo {

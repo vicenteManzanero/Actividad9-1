@@ -5,6 +5,7 @@
  */
 package itv;
 
+import vehiculos.Vehiculo;
 import itv.util.GestorIO;
 import itv.util.Intervalo;
 import java.util.regex.Pattern;

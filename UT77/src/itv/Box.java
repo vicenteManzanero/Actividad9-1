@@ -5,6 +5,7 @@
  */
 package itv;
 
+import vehiculos.Vehiculo;
 import itv.util.GestorIO;
 
 class Box {

@@ -5,6 +5,7 @@
  */
 package itv;
 
+import vehiculos.Vehiculo;
 import java.util.Arrays;
 import itv.util.GestorIO;
 
