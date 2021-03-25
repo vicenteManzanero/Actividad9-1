@@ -10,21 +10,23 @@ import java.util.regex.Pattern;
 
  public abstract class Vehiculo  {
 
-    private String matricula;
-    private String modelo;
-    private TipoVehiculo tipoVehiculo;
-    private int Cilindros;
-    private static final int  PRECIO_BASE = 15;
+    protected String matricula;
+    protected String modelo;
+    protected TipoVehiculo tipoVehiculo;
+    protected int cilindros;
+    protected int cilindrada;
+    protected final int  PRECIO_BASE = 15;
     
     public static final String PATRON_MATRICULA = "\\d{4}[A-Z]{3}";
 
-    public Vehiculo(String matricula, String modelo, TipoVehiculo tipoVehiculo,int Cilindros) {
+    public Vehiculo(String matricula, String modelo, TipoVehiculo tipoVehiculo,int Cilindros,int Cilindrada) {
         assert Pattern.matches(PATRON_MATRICULA, matricula);
 
         this.matricula = matricula;
         this.modelo = modelo;
         this.tipoVehiculo = tipoVehiculo;
-        this.Cilindros = Cilindros;
+        this.cilindros = Cilindros;
+        this.cilindrada = Cilindrada;
     }
    
     public boolean tieneEsta(String matricula) {
@@ -34,11 +36,8 @@ import java.util.regex.Pattern;
     
     @Override
     public String toString() {
-        return "Matricula:" + matricula + " Modelo:" + modelo + " Tipo:" + tipoVehiculo.toString();
+        return "Matricula: " + matricula + "Modelo: " + modelo +"Cilindros: "+cilindros+"Cilindrada: "+cilindrada+"Tipo: "+tipoVehiculo.toString();
     }
 
-    public double calcularPrecio() {
-        return PRECIO_BASE * Cilindros;
-        
-    }
+    public abstract double calcularPrecio();
 }

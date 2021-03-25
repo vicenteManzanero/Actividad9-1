@@ -1,0 +1,37 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vehiculos;
+
+import itv.TipoVehiculo;
+
+/**
+ *
+ * @author ciclost
+ */
+public class Microbus extends TransportePersona {
+    protected final double  PRECIO_PLAZA = 2;
+
+    public Microbus(int numeroDePlazas, String matricula, String modelo, TipoVehiculo tipoVehiculo, int Cilindros, int Cilindrada) {
+        super(numeroDePlazas, matricula, modelo, tipoVehiculo, Cilindros, Cilindrada);
+    }
+
+
+
+    public double calcularPrecio() {
+        double precio = 0;
+        
+        precio = this.PRECIO_BASE * this.cilindros+ this.PRECIO_PLAZA * numeroDePlazas;
+        
+        if (this.cilindrada>1200){
+            precio +=10;
+        }
+       
+   
+        return precio;
+        
+    }
+    
+}

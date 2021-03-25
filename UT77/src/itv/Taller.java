@@ -72,9 +72,9 @@ public class Taller {
         } while (opcion != 6);
     }
 
-    private Vehiculo recogerNuevoVehiculo() {
+    /*private Vehiculo recogerNuevoVehiculo() {
         return new Vehiculo(getMatricula(), getModelo(), getTipoVehiculo(),getCilindro()) {};
-    }
+    }*/
     
     private int getCilindro(){
         int cilindros = 0;
