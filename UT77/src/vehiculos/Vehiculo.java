@@ -8,7 +8,7 @@ package vehiculos;
 import itv.TipoVehiculo;
 import java.util.regex.Pattern;
 
- public class Vehiculo extends VehiculoGeneral  {
+ public abstract class Vehiculo  {
 
     private String matricula;
     private String modelo;
@@ -37,7 +37,6 @@ import java.util.regex.Pattern;
         return "Matricula:" + matricula + " Modelo:" + modelo + " Tipo:" + tipoVehiculo.toString();
     }
 
-    @Override
     public double calcularPrecio() {
         return PRECIO_BASE * Cilindros;
         

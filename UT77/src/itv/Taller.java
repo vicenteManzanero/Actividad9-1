@@ -73,13 +73,23 @@ public class Taller {
     }
 
     private Vehiculo recogerNuevoVehiculo() {
-        return new Vehiculo(getMatricula(), getModelo(), getTipoVehiculo(),getCilindro());
+        return new Vehiculo(getMatricula(), getModelo(), getTipoVehiculo(),getCilindro()) {};
     }
     
     private int getCilindro(){
-        int cilindro = 0;
+        int cilindros = 0;
         GestorIO gestorIO = new GestorIO();
-        return cilindro;
+        Intervalo in = new Intervalo(2,6);
+
+        
+        do{
+            gestorIO.out("Introduce un numero de cilindros entre 2 y 6 : ");
+            cilindros = gestorIO.inInt();
+        }while(!in.incluye(cilindros));
+        
+
+        return cilindros;
+        
     }
     
     private String getMatricula() {
