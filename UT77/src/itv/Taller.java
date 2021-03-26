@@ -35,7 +35,7 @@ public class Taller {
 
             switch (opcion) {
                 case 1:
-                    colaInicial.mete(this.recogerNuevoVehiculo());
+                 //   colaInicial.mete(this.recogerNuevoVehiculo());
                     gestorIO.out("Vehículo añadido a la cola");
                     break;
                 case 2:
