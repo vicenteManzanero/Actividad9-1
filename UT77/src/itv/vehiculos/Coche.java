@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vehiculos;
+package itv.vehiculos;
 
 import itv.TipoVehiculo;
 
@@ -11,19 +11,21 @@ import itv.TipoVehiculo;
  *
  * @author ciclost
  */
-public class Microbus extends TransportePersona {
-    protected final double  PRECIO_PLAZA = 2;
+public class Coche extends TransportePersona {
+    protected final double  PRECIO_PLAZA = 1.5;
 
-    public Microbus(int numeroDePlazas, String matricula, String modelo, TipoVehiculo tipoVehiculo, int Cilindros, int Cilindrada) {
+    public Coche(int numeroDePlazas, String matricula, String modelo, TipoVehiculo tipoVehiculo, int Cilindros, int Cilindrada) {
         super(numeroDePlazas, matricula, modelo, tipoVehiculo, Cilindros, Cilindrada);
     }
 
-
-
     public double calcularPrecio() {
         double precio = 0;
+        if(this.numeroDePlazas>3){
+            precio = this.PRECIO_BASE * this.cilindros+ this.PRECIO_PLAZA * numeroDePlazas;
+        }else{
+            precio = this.PRECIO_BASE * this.cilindros;
+        }
         
-        precio = this.PRECIO_BASE * this.cilindros+ this.PRECIO_PLAZA * numeroDePlazas;
         
         if (this.cilindrada>1200){
             precio +=10;
